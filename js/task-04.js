@@ -6,7 +6,6 @@ if (userAnswer === null) {
   console.log('Отменено пользователем!');
 } else {
   let amountDroid = Number.parseInt(userAnswer);
-  console.log(amountDroid);
   if (Number.isNaN(amountDroid)) {
     prompt('Вы ввели некорректное значение вашей покупки.');
   } else {
