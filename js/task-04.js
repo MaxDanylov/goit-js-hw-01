@@ -7,7 +7,7 @@ if (userAnswer === null) {
 } else {
   let amountDroid = Number.parseInt(userAnswer);
   if (Number.isNaN(amountDroid)) {
-    prompt('Вы ввели некорректное значение вашей покупки.');
+    alert('Вы ввели некорректное значение вашей покупки.');
   } else {
     const totalPrice = amountDroid * pricePerDroid;
     if (totalPrice > credits) {
