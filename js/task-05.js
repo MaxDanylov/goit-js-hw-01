@@ -10,30 +10,41 @@ const indiaCost = 80;
 const jamaicaName = 'Ямайка';
 const jamaicaCost = 120;
 const userChoice = prompt('Введите страну назначения.');
+let countryName;
+let cost;
+const message = `Доставка в ${countryName} будет стоить ${cost} кредитов`;
+
 if (userChoice === null) {
   alert('Отменено пользователем.');
 } else {
   switch (userChoice.toLowerCase()) {
     case chinaName.toLowerCase():
-      alert(`Доставка в ${chinaName} будет стоить ${chinaCost} кредитов`);
+      countryName = chinaName;
+      cost = chinaCost;
+      console.log(countryName, cost);
       break;
     case chileName.toLowerCase():
-      alert(`Доставка в ${chileName} будет стоить ${chileCost} кредитов`);
+      countryName = chileName;
+      cost = chileCost;
       break;
     case australiaName.toLowerCase():
-      alert(
-        `Доставка в ${australiaName} будет стоить ${australiaCost} кредитов`,
-      );
+      countryName = australiaName;
+      cost = australiaCost;
       break;
     case indiaName.toLowerCase():
-      alert(`Доставка в ${indiaName} будет стоить ${indiaCost} кредитов`);
+      countryName = indiaName;
+      cost = indiaCost;
       break;
     case jamaicaName.toLowerCase():
-      alert(`Доставка в ${jamaicaName} будет стоить ${jamaicaCost} кредитов`);
+      countryName = jamaicaName;
+      cost = jamaicaCost;
       break;
     default:
       alert(
         `Я не знаю страны ${userChoice}! В стране ${userChoice} говорят по английски? © Pulp Fiction`,
       );
   }
+}
+if (countryName !== undefined) {
+  alert(message);
 }
