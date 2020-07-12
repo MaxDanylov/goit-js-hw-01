@@ -1,43 +1,31 @@
 'use strict';
-const chinaName = 'Китай';
-const chinaCost = 100;
-const chileName = 'Чили';
-const chileCost = 250;
-const australiaName = 'Австралия';
-const australiaCost = 170;
-const indiaName = 'Индия';
-const indiaCost = 80;
-const jamaicaName = 'Ямайка';
-const jamaicaCost = 120;
 const userChoice = prompt('Введите страну назначения.');
 let countryName;
 let cost;
-const message = `Доставка в ${countryName} будет стоить ${cost} кредитов`;
-
 if (userChoice === null) {
   alert('Отменено пользователем.');
 } else {
   switch (userChoice.toLowerCase()) {
-    case chinaName.toLowerCase():
-      countryName = chinaName;
-      cost = chinaCost;
+    case 'Китай'.toLowerCase():
+      countryName = 'Китай';
+      cost = 100;
       console.log(countryName, cost);
       break;
-    case chileName.toLowerCase():
-      countryName = chileName;
-      cost = chileCost;
+    case 'Чили'.toLowerCase():
+      countryName = 'Чили';
+      cost = 250;
       break;
-    case australiaName.toLowerCase():
-      countryName = australiaName;
-      cost = australiaCost;
+    case 'Австралия'.toLowerCase():
+      countryName = 'Австралия';
+      cost = 170;
       break;
-    case indiaName.toLowerCase():
-      countryName = indiaName;
-      cost = indiaCost;
+    case 'Индия'.toLowerCase():
+      countryName = 'Индия';
+      cost = 80;
       break;
-    case jamaicaName.toLowerCase():
-      countryName = jamaicaName;
-      cost = jamaicaCost;
+    case 'Ямайка'.toLowerCase():
+      countryName = 'Ямайка';
+      cost = 120;
       break;
     default:
       alert(
@@ -45,6 +33,7 @@ if (userChoice === null) {
       );
   }
 }
+const message = `Доставка в ${countryName} будет стоить ${cost} кредитов`;
 if (countryName !== undefined) {
   alert(message);
 }
