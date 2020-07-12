@@ -1,11 +1,11 @@
 'use strict';
 const credits = 23580;
 const pricePerDroid = 3000;
-let userAnswer = prompt('Пожалуйста, введите необходимое количество дроидов');
+const userAnswer = prompt('Пожалуйста, введите необходимое количество дроидов');
 if (userAnswer === null) {
   console.log('Отменено пользователем!');
 } else {
-  let amountDroid = Number.parseInt(userAnswer);
+  const amountDroid = Number.parseInt(userAnswer);
   if (Number.isNaN(amountDroid)) {
     alert('Вы ввели некорректное значение вашей покупки.');
   } else {
